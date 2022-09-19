@@ -1,8 +1,5 @@
 :root {
-  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans",
-    "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed",
-    "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue",
-    Helvetica, Arial, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 18px;
 
   /* Declare primary color variable */
@@ -12,15 +9,18 @@
 }
 
 h1 {
+  font-family: "Rubik", sans-serif;
   font-size: 2.5rem;
   text-align: center;
   background-color: var(--cream);
   color: var(--primary-dark);
   padding: 1rem;
   box-shadow: 0 -0.2rem 1rem rgba(0, 0, 0, 0.5);
+  font-weight: bold;
 }
 
 h2 {
+  font-family: "Rubik", sans-serif;
   font-size: 1.8rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -30,6 +30,7 @@ h2 {
 
 p {
   margin-block: 1rem;
+  font-family: "Raleway", sans-serif;
 }
 
 @media (max-width: 500px) {
