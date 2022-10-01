@@ -4,6 +4,7 @@
 
   /* Declare primary color variable */
   --primary: #9c7a53;
+  --primary-medium: #8b6b46;
   --primary-dark: #604b32;
   --cream: #fff9f0;
 }
@@ -36,6 +37,7 @@ a {
 
 a:hover {
   text-decoration: underline;
+  color: var(--primary-medium);
 }
 
 p {
@@ -91,4 +93,32 @@ p {
 .inline-image-left {
   float: left;
   margin-right: 2rem;
+}
+
+.contact-card-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-card {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 0;
+  text-align: center;
+  background-color: var(--primary);
+  color: var(--cream);
+  min-width: 300px;
+  max-width: 400px;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.contact-card:hover {
+  background-color: var(--primary-medium);
+  color: var(--cream);
 }
