@@ -12,6 +12,37 @@
         content="Private lessons in Logan, UT for piano, trumpet, and other brass instruments">
     <meta property="og:image" content="img/amy-student.jpg">
 
+    <!-- LD JSON schema for thing > intangible > service -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Amy's Music Studio",
+            "description": "Private lessons in Logan, UT for piano, trumpet, and other brass instruments",
+            "provider": {
+                "@type": "Person",
+                "name": "Amy DeSpain"
+            },
+            "areaServed": {
+                "@type": "City",
+                "name": "Logan",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Logan",
+                    "addressRegion": "UT"
+                }
+            },
+            "serviceType": "Music Lessons",
+            "offers": {
+                "@type": "Offer",
+                "price": "20",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "url": "https://amysmusicstudio.com"
+            }
+        }
+    </script>
+
     <meta name="robots" content="index, follow">
     <meta name="revisit-after" content="7 days">
 
