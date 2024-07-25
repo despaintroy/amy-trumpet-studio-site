@@ -1,17 +1,92 @@
+/* ===================== */
+/*  GLOBAL               */
+/* ===================== */
+
 :root {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
 
-  /* Declare primary color variable */
   --primary: #9c7a53;
   --primary-medium: #8b6b46;
   --primary-dark: #604b32;
   --cream: #fff9f0;
 }
 
+h2 {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+p {
+  margin-block: 1rem;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.8;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--primary-medium);
+  }
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.section {
+  padding-block: 5rem;
+
+  &:nth-of-type(even) {
+    background-color: var(--cream);
+    border-block: 1px solid var(--primary);
+  }
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-inline: 2rem;
+
+  @media (max-width: 500px) {
+    padding-inline: 1rem;
+  }
+}
+
+.inline-image-right {
+  float: right;
+  margin-left: 2rem;
+}
+
+.inline-image-left {
+  float: left;
+  margin-right: 2rem;
+}
+
+.inline-image {
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 600px) {
+    margin-inline: auto;
+    float: unset;
+  }
+}
+
+/* ===================== */
+/*  HERO                */
+/* ===================== */
+
 .heading-container {
   background-color: var(--cream);
-  box-shadow: 0 -0.2rem 1rem rgba(0, 0, 0, 0.5);
+  border-block: 1px solid var(--primary);
+  box-shadow: 0 -0.2rem 0.8rem rgba(0, 0, 0, 0.5);
   padding: 1rem;
   text-align: center;
 
@@ -26,36 +101,8 @@ h1 {
   font-size: 2.5rem;
   color: var(--primary-dark);
   font-weight: bold;
-}
 
-h2 {
-  font-family: "Rubik", sans-serif;
-  font-size: 1.8rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  color: var(--primary);
-  border-bottom: 3px solid var(--primary);
-}
-
-a {
-  color: var(--primary);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: var(--primary-medium);
-}
-
-p {
-  margin-block: 1rem;
-  font-family: "Raleway", sans-serif;
-  line-height: 1.8;
-}
-
-@media (max-width: 500px) {
-  h1 {
+  @media (max-width: 500px) {
     font-size: 2rem;
   }
 }
@@ -75,53 +122,53 @@ p {
   height: max(50vw, 500px);
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1rem;
-}
+/* ===================== */
+/*  INSTRUMENTS SECTION  */
+/* ===================== */
 
-.inline-image {
-  border-radius: 10px;
-  margin-bottom: 1.5rem;
-}
+.instrument-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 38px;
 
-@media (max-width: 600px) {
-  .inline-image {
-    width: 100% !important;
-    padding-inline: calc((100vw - 400px) / 2);
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
   }
 }
 
-.inline-image-right {
-  float: right;
-  margin-left: 2rem;
-}
-
-.inline-image-left {
-  float: left;
-  margin-right: 2rem;
-}
-
-.contact-card-container {
-  margin-top: 2rem;
+.instrument-card {
+  text-align: center;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  container-type: inline-size;
+
+  p {
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+    color: var(--primary);
+    font-size: clamp(1rem, 10cqw, 1.4rem);
+    line-height: 1.2;
+  }
+}
+
+.contact-cards {
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 1rem;
+
+  @media (max-width: 610px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .contact-card {
   display: block;
-  flex-basis: 0;
-  flex-grow: 1;
-  flex-shrink: 0;
   text-align: center;
   background-color: var(--primary);
   color: var(--cream);
-  min-width: 300px;
-  max-width: 400px;
   padding: 0.5rem;
   border-radius: 10px;
 }
