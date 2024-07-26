@@ -6,7 +6,7 @@
   font-family: "Raleway", sans-serif;
   font-size: 18px;
 
-  --primary: oklch(60% 0.07 70);
+  --primary: oklch(55% 0.07 70);
   --primary-medium: oklch(65% 0.07 70);
   --primary-dark: oklch(42% 0.07 70);
   --cream: oklch(98% 0.01 70);
@@ -104,7 +104,7 @@ a {
 }
 
 .hero-img {
-  background-image: url("./img/cover.webp");
+  background-image: url("img/cover.webp");
   /* background-image: url("./img/cover2.jpg"); */
   background-size: cover;
   background-repeat: no-repeat;
