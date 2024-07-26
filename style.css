@@ -6,17 +6,17 @@
   font-family: "Raleway", sans-serif;
   font-size: 18px;
 
-  --primary: #9c7a53;
-  --primary-medium: #8b6b46;
-  --primary-dark: #604b32;
-  --cream: #fff9f0;
+  --primary: oklch(60% 0.07 70);
+  --primary-medium: oklch(65% 0.07 70);
+  --primary-dark: oklch(42% 0.07 70);
+  --cream: oklch(98% 0.01 70);
 }
 
 h2 {
   font-family: "Rubik", sans-serif;
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: var(--primary);
+  color: var(--primary-dark);
 }
 
 p {
@@ -32,7 +32,7 @@ a {
 
   &:hover {
     text-decoration: underline;
-    color: var(--primary-medium);
+    color: var(--primary-dark);
   }
 }
 
@@ -43,7 +43,7 @@ a {
 .section {
   padding-block: 5rem;
 
-  &:nth-of-type(even) {
+  &:nth-child(even) {
     background-color: var(--cream);
     border-block: 1px solid var(--primary);
   }
@@ -108,7 +108,7 @@ a {
   background-repeat: no-repeat;
   background-position-y: center;
   background-position-x: center;
-  height: clamp(500px, 70vw, calc(100vh - 12rem));
+  height: clamp(500px, 70vw, calc(100vh - 16rem));
   max-width: min(1400px, calc(100vw - 4rem));
   margin-inline: auto;
 
@@ -120,6 +120,33 @@ a {
 /* ===================== */
 /*  INSTRUMENTS SECTION  */
 /* ===================== */
+
+.contact-cards {
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 1rem;
+
+  @media (max-width: 670px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-card {
+  display: block;
+  text-align: center;
+  background-color: oklch(95% 0.015 70);
+  color: var(--primary-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+
+  &:hover {
+    background-color: oklch(93% 0.02 70);
+    color: var(--primary-dark);
+  }
+}
 
 .instrument-cards {
   display: grid;
@@ -147,28 +174,9 @@ a {
   }
 }
 
-.contact-cards {
-  margin-bottom: 3rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 1rem;
-
-  @media (max-width: 610px) {
-    grid-template-columns: 1fr;
-  }
-}
-
-.contact-card {
-  display: block;
-  text-align: center;
+.divider {
+  width: 100px;
+  height: 4px;
   background-color: var(--primary);
-  color: var(--cream);
-  padding: 0.5rem;
-  border-radius: 10px;
-}
-
-.contact-card:hover {
-  background-color: var(--primary-medium);
-  color: var(--cream);
+  margin-block: 1.5rem;
 }
