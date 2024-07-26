@@ -2,15 +2,6 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEPVRVY775"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-ZEPVRVY775');
-    </script>
-
     <title>Amy's Music Studio | Trumpet, Piano, and Clarinet Lessons in Logan, UT</title>
     <meta name="description"
         content="Private music lessons in Logan, UT for piano, trumpet, clarinet, and brass instruments">
@@ -79,7 +70,18 @@
     <meta name="msapplication-TileColor" content="#9c7a53">
     <meta name="theme-color" content="#9c7a53">
 
-    <script src="index.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZEPVRVY775"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-ZEPVRVY775');
+    </script>
+
+    <!-- Lite YouTube Embed -->
+    <link rel="stylesheet" href="css/lite-yt-embed.css" />
+    <script src="js/lite-yt-embed.js"></script>
 </head>
 
 <body style="padding-bottom: 100px">
@@ -104,19 +106,20 @@
 
             <div class="instrument-cards">
                 <div class="instrument-card">
-                    <img src="img/piano_watercolor.png" alt="piano watercolor illustration" width="250px"
-                        style="transform: scale(0.85);">
+                    <img loading="lazy" src="img/piano_watercolor.png" alt="piano watercolor illustration" width="250px"
+                        height="250px" style="transform: scale(0.85);">
                     <p>Piano lessons</p>
                 </div>
 
                 <div class="instrument-card">
-                    <img src="img/trumpet_watercolor.png" alt="trumpet watercolor illustration" width="250px">
+                    <img loading="lazy" src="img/trumpet_watercolor.png" alt="trumpet watercolor illustration"
+                        width="250px" height="250px">
                     <p>Trumpet lessons</p>
                 </div>
 
                 <div class="instrument-card">
-                    <img src="img/clarinet_watercolor.png" alt="clarinet watercolor illustration" width="250px"
-                        style="transform: rotate(-60deg)">
+                    <img loading="lazy" src="img/clarinet_watercolor.png" alt="clarinet watercolor illustration"
+                        width="250px" height="250px" style="transform: rotate(-60deg)">
                     <p>Clarinet lessons</p>
                 </div>
             </div>
@@ -127,7 +130,7 @@
         <div class="container">
             <h2>Private Music Lessons</h2>
 
-            <img src="img/amy-student.jpg" alt="Amy posing for a picture with one of her students"
+            <img loading="lazy" src="img/amy-student.jpg" alt="Amy posing for a picture with one of her students"
                 class="inline-image inline-image-right" width="300px">
 
             <p>
@@ -156,7 +159,7 @@
         <div class="container">
             <h2>About Amy</h2>
             <p>
-                <img src="img/amy-play-bw.jpg" alt="Amy playing a trumpet solo in band"
+                <img loading="lazy" src="img/amy-play-bw.jpg" alt="Amy playing a trumpet solo in band"
                     class="inline-image inline-image-left" width="300px">
                 I began the exciting journey of learning the trumpet when I was 12 and quickly fell in
                 love with making music. At Utah State University, I grew my musicianship skills and graduated with a
@@ -179,10 +182,9 @@
     <div class="section">
         <div class="container">
             <h2>Videos</h2>
-            <iframe width="100%" height="100%" style="aspect-ratio: 16 / 9;"
-                src="https://www.youtube.com/embed/vgohPCWxwCI?start=1777" title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+
+            <lite-youtube videoid="vgohPCWxwCI" params="start=1777" title="Amy DeSpain | USU Concerto Competition"
+                style="background-image: url('img/concerto-poster.jpg');"></lite-youtube>
         </div>
     </div>
 </body>
