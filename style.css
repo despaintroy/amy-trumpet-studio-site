@@ -92,6 +92,8 @@ a {
     font-size: clamp(2rem, 7vw, 3rem);
     color: var(--primary-dark);
     font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
   }
 
   p {
