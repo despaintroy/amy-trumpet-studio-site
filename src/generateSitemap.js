@@ -12,4 +12,4 @@ const contents = [
   "</urlset>",
 ].join("\n");
 
-fs.writeFileSync("../Sitemapx.xml", contents);
+fs.writeFileSync("../sitemap.xml", contents);
