@@ -1,0 +1,28 @@
+.contactLinks {
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 1rem;
+
+  @media (max-width: 670px) {
+    grid-template-columns: 1fr;
+  }
+
+  a {
+    display: block;
+    text-align: center;
+    background-color: oklch(95% 0.015 70);
+    color: var(--primary-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+
+    &:hover {
+      background-color: oklch(93% 0.02 70);
+      color: var(--primary-dark);
+    }
+  }
+}
+
+
