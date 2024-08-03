@@ -9,13 +9,14 @@ import clarinetWatercolorPic from "@/images/clarinet-watercolor.png";
 import pianoWatercolorPic from "@/images/piano-watercolor.png";
 import trumpetWatercolorPic from "@/images/trumpet-watercolor.png";
 import coverPic from "@/images/cover.jpg";
+import {Fonts} from "@/fonts";
 
 export default function Home() {
   return (
     <>
       <div className="title-area">
         <div className="container">
-          <h1>Amy&apos;s Music Studio</h1>
+          <h1 className={Fonts.headings.className}>Amy&apos;s Music Studio</h1>
           <p>Private music lessons in Logan, UT for piano, trumpet, clarinet, <span className="no-wrap">and brass instruments</span>
           </p>
         </div>
@@ -77,7 +78,7 @@ export default function Home() {
 
       <section className="section">
         <div className="container">
-          <h2>Private Music Lessons</h2>
+          <h2 className={Fonts.headings.className}>Private Music Lessons</h2>
 
           <Image
             src={amyStudentPic}
@@ -111,7 +112,7 @@ export default function Home() {
 
       <section className="section">
         <div className="container">
-          <h2>About Amy</h2>
+          <h2 className={Fonts.headings.className}>About Amy</h2>
 
           <Image
             src={amyPlayBwPic}
@@ -140,7 +141,7 @@ export default function Home() {
 
       <section className="section">
         <div className="container">
-          <h2>Videos</h2>
+          <h2 className={Fonts.headings.className}>Videos</h2>
 
           <YouTubeEmbed
             videoid="vgohPCWxwCI"

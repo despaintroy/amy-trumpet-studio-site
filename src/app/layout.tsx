@@ -1,20 +1,11 @@
 import type {Metadata} from "next";
-import {Raleway, Rubik} from "next/font/google";
 import "./reset.css";
 import "./globals.css";
 import React from "react";
 import {CONTACT_EMAIL, CONTACT_PHONE, CONTACT_URL} from "@/constants";
 import {GoogleTagManager} from '@next/third-parties/google'
+import {Fonts} from "@/fonts";
 
-const rubik = Rubik({
-  subsets: ["latin"],
-  variable: '--font-rubik'
-});
-
-const raleway = Raleway({
-  subsets: ["latin"],
-  variable: '--font-raleway'
-});
 
 export const metadata: Metadata = {
     title: "Amy's Music Studio | Trumpet, Piano, and Clarinet Lessons in Logan, UT",
@@ -48,7 +39,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${rubik.variable} ${raleway.variable}`}>
+    <html lang="en" className={Fonts.body.className}>
     <GoogleTagManager gtmId="G-ZEPVRVY775"/>
     <body>{children}</body>
     </html>
