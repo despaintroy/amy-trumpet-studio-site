@@ -2,11 +2,13 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import {YouTubeEmbed} from '@next/third-parties/google'
 
+// IMAGES
 import amyStudentPic from "@/images/amy-student.jpg";
 import amyPlayBwPic from "@/images/amy-play-bw.jpg";
 import clarinetWatercolorPic from "@/images/clarinet-watercolor.png";
 import pianoWatercolorPic from "@/images/piano-watercolor.png";
 import trumpetWatercolorPic from "@/images/trumpet-watercolor.png";
+import coverPic from "@/images/cover.jpg";
 
 export default function Home() {
   return (
@@ -14,13 +16,20 @@ export default function Home() {
       <div className="title-area">
         <div className="container">
           <h1>Amy&apos;s Music Studio</h1>
-          <p>Private music lessons in Logan, UT for piano, trumpet, clarinet, <span className="no-wrap">and brass
-                    instruments</span>
+          <p>Private music lessons in Logan, UT for piano, trumpet, clarinet, <span className="no-wrap">and brass instruments</span>
           </p>
         </div>
       </div>
 
-      <div className="hero-img" role="img" aria-label="Amy DeSpain holding a trumpet">
+      <div className="hero-img-container">
+        <Image
+          src={coverPic}
+          alt="Amy DeSpain holding a trumpet"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          priority
+        />
       </div>
 
       <section className="section" style={{paddingTop: '3rem'}}>

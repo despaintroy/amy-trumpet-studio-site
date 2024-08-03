@@ -18,6 +18,7 @@ h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
     color: var(--primary-dark);
+    line-height: 1.2;
 }
 
 p {
@@ -106,13 +107,8 @@ a {
     }
 }
 
-.hero-img {
-    background-image: url("/img/cover.webp");
-    /* background-image: url("./img/cover2.jpg"); */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: center;
-    background-position-x: center;
+.hero-img-container {
+    position: relative;
     height: clamp(500px, 70vw, calc(100vh - 16rem));
     max-width: min(1400px, calc(100vw - 4rem));
     margin-inline: auto;
@@ -123,7 +119,7 @@ a {
 }
 
 /* ===================== */
-/*    S SECTION  */
+/*  SECTION              */
 /* ===================== */
 
 .contact-cards {
@@ -176,6 +172,7 @@ a {
         color: var(--primary);
         font-size: clamp(1rem, 10cqw, 1.4rem);
         line-height: 1.2;
+        font-weight: 400;
     }
 
     img {
