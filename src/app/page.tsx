@@ -5,11 +5,9 @@ import {YouTubeEmbed} from '@next/third-parties/google'
 // IMAGES
 import amyStudentPic from "@/images/amy-student.jpg";
 import amyPlayBwPic from "@/images/amy-play-bw.jpg";
-import clarinetWatercolorPic from "@/images/clarinet-watercolor.png";
-import pianoWatercolorPic from "@/images/piano-watercolor.png";
-import trumpetWatercolorPic from "@/images/trumpet-watercolor.png";
 import coverPic from "@/images/cover.jpg";
 import {Fonts} from "@/fonts";
+import InstrumentCards from "@/components/InstrumentCards/InstrumentCards";
 
 export default function Home() {
   return (
@@ -26,9 +24,8 @@ export default function Home() {
         <Image
           src={coverPic}
           alt="Amy DeSpain holding a trumpet"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
+          style={{objectFit: 'cover', objectPosition: 'center'}}
+          fill
           priority
         />
       </div>
@@ -40,39 +37,7 @@ export default function Home() {
             <a className="contact-card" href="mailto:amydespain365@gmail.com">amydespain365@gmail.com</a>
           </div>
 
-          <div className="instrument-cards">
-            <div className="instrument-card">
-              <Image
-                src={pianoWatercolorPic}
-                alt="piano watercolor illustration"
-                width={250}
-                height={250}
-                style={{transform: "scale(0.85)"}}
-              />
-              <p>Piano lessons</p>
-            </div>
-
-            <div className="instrument-card">
-              <Image
-                src={trumpetWatercolorPic}
-                alt="trumpet watercolor illustration"
-                width={250}
-                height={250}
-              />
-              <p>Trumpet lessons</p>
-            </div>
-
-            <div className="instrument-card">
-              <Image
-                src={clarinetWatercolorPic}
-                alt="clarinet watercolor illustration"
-                width={250}
-                height={250}
-                style={{transform: "rotate(-60deg)"}}
-              />
-              <p>Clarinet lessons</p>
-            </div>
-          </div>
+          <InstrumentCards/>
         </div>
       </section>
 
