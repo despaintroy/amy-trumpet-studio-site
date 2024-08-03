@@ -1,7 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import YouTubeEmbed from "@/components/YouTubeEmbed";
-
+import {YouTubeEmbed} from '@next/third-parties/google'
 
 // <Image
 //   className={styles.logo}
@@ -115,14 +114,11 @@ export default function Home() {
           <h2>Videos</h2>
 
           <YouTubeEmbed
-            id="vgohPCWxwCI"
-            title="Amy DeSpain | USU Concerto Competition"
+            videoid="vgohPCWxwCI"
             params="start=1777"
-            thumbnail='img/concerto-poster.jpg'
+            playlabel="Amy DeSpain | USU Concerto Competition"
+            style="background-image: url('img/concerto-poster.jpg');"
           />
-
-          {/*<lite-youtube videoid="vgohPCWxwCI" params="start=1777" title="Amy DeSpain | USU Concerto Competition"*/}
-          {/*              style={{backgroundImage: 'url('img/concerto-poster.webp')'}}></lite-youtube>*/}
         </div>
       </section>
     </>
