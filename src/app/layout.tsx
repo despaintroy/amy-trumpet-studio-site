@@ -1,7 +1,7 @@
 import type {Metadata} from "next";
 import {Raleway, Rubik} from "next/font/google";
-import "./globals.css";
 import "./reset.css";
+import "./globals.css";
 import React from "react";
 import {CONTACT_EMAIL, CONTACT_PHONE, CONTACT_URL} from "@/constants";
 import {GoogleTagManager} from '@next/third-parties/google'
