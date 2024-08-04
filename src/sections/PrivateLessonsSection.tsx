@@ -2,14 +2,27 @@ import {FC} from "react";
 import {Fonts} from "@/fonts";
 import Image from "next/image";
 import styles from './PrivateLessonsSection.module.scss';
-
+import {INSTRUMENTS} from "@/constants";
+import {InstrumentName} from "@/types";
+import {capitalize} from "@/helpers";
 import amyStudentPic from "@/images/amy-student.jpg";
 
-const PrivateLessonsSection: FC = () => {
+type PrivateLessonsSectionProps = {
+  instrument?: InstrumentName
+}
+
+const PrivateLessonsSection: FC<PrivateLessonsSectionProps> = (props) => {
+  const {instrument} = props
+
+  const otherInstruments = INSTRUMENTS.filter(x => x !== instrument)
+  const instrumentSentence = instrument
+    ? `In addition to ${instrument}, I also teach ${new Intl.ListFormat().format(otherInstruments)}.`
+    : `I teach ${new Intl.ListFormat().format([...INSTRUMENTS, 'other brass instruments'])}.`
+
   return (
     <section>
       <div className="container">
-        <h2 className={Fonts.headings.className}>Private Music Lessons</h2>
+        <h2 className={Fonts.headings.className}>Private {capitalize(instrument ?? 'music')} Lessons</h2>
 
         <Image
           src={amyStudentPic}
@@ -29,7 +42,8 @@ const PrivateLessonsSection: FC = () => {
         </p>
 
         <p>
-          Prices are $20 for a half hour, or $35 for an hour.
+          Prices are $20 for a half hour, or $35 for an
+          hour. {instrumentSentence}
         </p>
 
         <div className={styles.divider}></div>

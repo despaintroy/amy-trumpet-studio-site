@@ -6,10 +6,11 @@ import {INSTRUMENTS} from "@/constants";
 import styles from "./page.module.scss";
 import {Fonts} from "@/fonts";
 import ContactLinks from "@/components/ContactLinks/ContactLinks";
-import InstrumentCards from "@/components/InstrumentCards/InstrumentCards";
 import PrivateLessonsSection from "@/sections/PrivateLessonsSection";
 import AboutSection from "@/sections/AboutSection";
 import VideoSection from "@/sections/VideoSection";
+import coverPic from "@/images/cover.jpg";
+import Image from "next/image";
 
 export const generateMetadata: GenerateMetadataFunction<'slug'> = ({params}) => {
   const {slug} = params
@@ -40,14 +41,22 @@ const Page: PageComponent<'slug'> = ({params}) => {
       </div>
     </div>
 
-    <section style={{paddingTop: '3rem'}}>
+    <section style={{paddingTop: '1rem'}}>
       <div className="container">
+        <div className={styles.imageContainer}>
+          <Image
+            src={coverPic}
+            alt="Amy DeSpain holding a trumpet"
+            style={{objectFit: 'cover', objectPosition: 'center'}}
+            fill
+            priority
+          />
+        </div>
         <ContactLinks/>
-        <InstrumentCards/>
       </div>
     </section>
 
-    <PrivateLessonsSection/>
+    <PrivateLessonsSection instrument={instrument}/>
 
     <AboutSection/>
 
