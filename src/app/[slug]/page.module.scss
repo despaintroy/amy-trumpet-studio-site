@@ -1,0 +1,14 @@
+.titleArea {
+  padding-block: 2rem;
+  text-align: center;
+
+  h1 {
+    font-size: clamp(2rem, 7vw, 3rem);
+  }
+
+  p {
+    margin: 0;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    line-height: 1.3;
+  }
+}

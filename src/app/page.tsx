@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "./page.module.scss"
 
 // IMAGES
 import coverPic from "@/images/cover.jpg";
@@ -13,7 +13,7 @@ import PrivateLessonsSection from "@/sections/PrivateLessonsSection";
 export default function Home() {
   return (
     <>
-      <div className="title-area">
+      <div className={styles.titleArea}>
         <div className="container">
           <h1 className={Fonts.headings.className}>Amy&apos;s Music Studio</h1>
           <p>Private music lessons in Logan, Utah for piano, trumpet, clarinet, <span className="no-wrap">and brass instruments</span>
@@ -21,7 +21,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="hero-img-container">
+      <div className={styles.heroImgContainer}>
         <Image
           src={coverPic}
           alt="Amy DeSpain holding a trumpet"

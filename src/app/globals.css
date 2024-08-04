@@ -1,7 +1,3 @@
-/* ===================== */
-/*  GLOBAL               */
-/* ===================== */
-
 :root {
     font-size: 18px;
 
@@ -14,7 +10,7 @@
 section {
     padding-block: 5rem;
 
-    &:nth-child(even) {
+    &:nth-of-type(even) {
         background-color: var(--cream);
         border-block: 1px solid var(--primary);
     }
@@ -23,6 +19,11 @@ section {
 h1, h2 {
     line-height: 1.2;
     color: var(--primary-dark);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.8rem;
 }
 
 h2 {
@@ -79,36 +80,5 @@ a {
     @media (max-width: 600px) {
         margin-inline: auto;
         float: unset;
-    }
-}
-
-/* ===================== */
-/*  HERO                */
-/* ===================== */
-
-.title-area {
-    padding-block: 2rem;
-    text-align: center;
-
-    h1 {
-        font-size: clamp(2rem, 7vw, 3rem);
-        margin-bottom: 0.8rem;
-    }
-
-    p {
-        margin: 0;
-        font-size: clamp(1rem, 2vw, 1.2rem);
-        line-height: 1.3;
-    }
-}
-
-.hero-img-container {
-    position: relative;
-    height: clamp(500px, 70vw, calc(100vh - 16rem));
-    max-width: min(1400px, calc(100vw - 4rem));
-    margin-inline: auto;
-
-    @media (max-width: 500px) {
-        max-width: calc(100vw - 2rem);
     }
 }

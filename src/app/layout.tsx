@@ -6,7 +6,6 @@ import {CONTACT_EMAIL, CONTACT_PHONE, CONTACT_URL} from "@/constants";
 import {GoogleTagManager} from '@next/third-parties/google'
 import {Fonts} from "@/fonts";
 
-
 export const metadata: Metadata = {
   title: "Amy's Music Studio | Trumpet, Piano, and Clarinet Lessons in Logan, Utah",
   description: "Private music lessons in Logan, Utah for piano, trumpet, clarinet, and brass instruments",
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
     emails: CONTACT_EMAIL,
     phoneNumbers: CONTACT_PHONE,
     locale: "en_US",
-    images: "img/cover.webp",
+    images: "img/og.jpg",
     description: "Private music lessons in Logan, Utah for piano, trumpet, clarinet, and brass instruments"
   },
   creator: "Troy DeSpain",

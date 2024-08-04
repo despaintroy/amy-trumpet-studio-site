@@ -1,0 +1,25 @@
+.heroImgContainer {
+  position: relative;
+  height: clamp(500px, 70vw, calc(100vh - 16rem));
+  max-width: min(1400px, calc(100vw - 4rem));
+  margin-inline: auto;
+
+  @media (max-width: 500px) {
+    max-width: calc(100vw - 2rem);
+  }
+}
+
+.titleArea {
+  padding-block: 2rem;
+  text-align: center;
+
+  h1 {
+    font-size: clamp(2rem, 7vw, 3rem);
+  }
+
+  p {
+    margin: 0;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    line-height: 1.3;
+  }
+}
