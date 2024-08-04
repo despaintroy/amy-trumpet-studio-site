@@ -1,4 +1,4 @@
-import type {Metadata} from "next";
+import type {Metadata, Viewport} from "next";
 import "./reset.css";
 import "./globals.css";
 import React from "react";
@@ -32,8 +32,11 @@ export const metadata: Metadata = {
       {sizes: "32x32", url: "favicon-32x32.png"},
     ]
   },
-  other: {'theme-color': '#9c7a53'}
 };
+
+export const viewport: Viewport = {
+  themeColor: '#9c7a53',
+}
 
 export default function RootLayout({children}: Readonly<{ children: React.ReactNode }>) {
   return (
