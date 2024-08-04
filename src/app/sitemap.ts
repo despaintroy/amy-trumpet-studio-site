@@ -1,5 +1,5 @@
 import {MetadataRoute} from 'next'
-import {CONTACT_URL, INSTRUMENTS} from "@/constants";
+import {CONTACT_URL, INSTRUMENT_PAGES} from "@/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: CONTACT_URL,
       lastModified: new Date(),
     },
-    ...INSTRUMENTS.map((instrument) => ({
+    ...INSTRUMENT_PAGES.map((instrument) => ({
       url: `${CONTACT_URL}${instrument}`,
       lastModified: new Date(),
     })),

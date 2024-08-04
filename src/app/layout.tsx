@@ -5,6 +5,7 @@ import React from "react";
 import {CONTACT_EMAIL, CONTACT_PHONE, CONTACT_URL} from "@/constants";
 import {GoogleTagManager} from '@next/third-parties/google'
 import {Fonts} from "@/fonts";
+import Footer from "@/sections/Footer";
 
 export const metadata: Metadata = {
   title: "Amy's Music Studio | Trumpet, Piano, and Clarinet Lessons in Logan, Utah",
@@ -42,7 +43,10 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
   return (
     <html lang="en" className={Fonts.body.className}>
     <GoogleTagManager gtmId="G-ZEPVRVY775"/>
-    <body>{children}</body>
+    <body>
+    {children}
+    <Footer/>
+    </body>
     </html>
   );
 }

@@ -2,7 +2,7 @@ import {GenerateMetadataFunction, PageComponent} from "@/types";
 import {capitalize} from "@/helpers";
 import {normalizeInstrumentName} from "@/app/[slug]/instruments";
 import {notFound} from "next/navigation";
-import {INSTRUMENTS} from "@/constants";
+import {INSTRUMENT_PAGES} from "@/constants";
 import styles from "./page.module.scss";
 import {Fonts} from "@/fonts";
 import ContactLinks from "@/components/ContactLinks/ContactLinks";
@@ -25,7 +25,7 @@ export const generateMetadata: GenerateMetadataFunction<'slug'> = ({params}) => 
 }
 
 export async function generateStaticParams() {
-  return INSTRUMENTS.map((instrument) => ({slug: instrument}))
+  return INSTRUMENT_PAGES.map((instrument) => ({slug: instrument}))
 }
 
 const Page: PageComponent<'slug'> = ({params}) => {
@@ -47,7 +47,7 @@ const Page: PageComponent<'slug'> = ({params}) => {
           <Image
             src={coverPic}
             alt="Amy DeSpain holding a trumpet"
-            style={{objectFit: 'cover', objectPosition: 'center'}}
+            style={{objectFit: 'cover', objectPosition: 'center', borderRadius: 10}}
             fill
             priority
           />

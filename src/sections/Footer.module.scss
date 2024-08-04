@@ -1,0 +1,16 @@
+.navList {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-block: 1.5rem;
+
+  li {
+    padding-inline: 1rem;
+    line-height: 1.2;
+
+    &:not(:last-child) {
+      border-right: 2px solid var(--primary);
+    }
+  }
+}
