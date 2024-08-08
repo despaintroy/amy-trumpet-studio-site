@@ -8,6 +8,7 @@ import {Fonts} from "@/fonts";
 import Footer from "@/sections/Footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(CONTACT_URL),
   title: "Amy's Music Studio | Trumpet, Piano, and Clarinet Lessons in Logan, Utah",
   description: "Private music lessons in Logan, Utah for piano, trumpet, clarinet, and brass instruments",
   applicationName: "Amy's Music Studio",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   },
   creator: "Troy DeSpain",
   robots: "index, follow",
-  alternates: {canonical: CONTACT_URL},
+  alternates: {canonical: './'},
   icons: {
     shortcut: "img/favicon.ico",
     icon: [
